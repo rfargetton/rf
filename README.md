@@ -1,3 +1,3 @@
 # Next.js + NetlifyCMS Starter Blog
 
-Image component testing
+A simple starter for a blog, using Next.js and NetlifyCMS.
