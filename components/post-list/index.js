@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {ArrowRight} from "react-feather";
+import Image from "next/image";
 
 import Date from "../date";
 import Container from "../container";
@@ -13,15 +14,21 @@ export default function PostList({ posts, children }) {
           {children}
         </div>
         <div>
-          <ul className="grid grid-cols-2 gap-4 list-none">
+          <ul className="grid grid-cols-2 gap-6 list-none">
             {posts.map((post) => (
-              <li key={post.id}>
+              <li key={post.id} className="transform hover:scale-105 transition">
                 <Card>
                   <div className="p-4">
-                    <img className="rounded-lg h-48 w-full object-cover" src={post.img} />
+                    <div className="relative h-48 w-full rounded-xl overflow-hidden">
+                      <Image 
+                        src={post.img}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </div>
                     <div className="mt-4">
-                      <h3>{post.title}</h3>
                       <Date dateString={post.date} />
+                      <h3 className="mt-2">{post.title}</h3>
                       <Link href={`/posts/${post.id}`}>
                         <a>
                           <div className="flex justify-between text-blue-700 items-center mt-4">
