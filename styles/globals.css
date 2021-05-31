@@ -35,7 +35,7 @@
     @apply list-outside list-disc ml-4;
   }
   .field {
-    @apply md:text-lg text-slate block w-full rounded-xl shadow-lg px-4 py-2 my-2 border-transparent bg-snow focus:outline-none focus:ring-2 focus:ring-sky dark:focus:ring-ice focus:shadow-xl ;
+    @apply md:text-lg block w-full rounded-xl leading-relaxed px-4 py-2 my-2 border-transparent bg-snow dark:bg-slate focus:outline-none ring-2 ring-snow-dark dark:ring-slate-dark focus:ring-sky dark:focus:ring-ice focus:shadow-xl ;
   }
   .radio {
     @apply mr-2;
@@ -44,7 +44,7 @@
     @apply mb-6;
   }
   .error {
-    @apply ring-2 ring-red-500;
+    @apply ring-2 ring-red-500 !important;
   }
   .error-message {
     @apply text-red-500;
