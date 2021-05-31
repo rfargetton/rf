@@ -11,6 +11,8 @@ function urlEncode (data){
 }
 
 export default function ContactForm({}){
+  const router = useRouter();
+
   return (
     <div className="py-5 z-20 relative">
       <Container>
