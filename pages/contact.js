@@ -1,6 +1,7 @@
 import {getFile} from "../lib/file";
 import Layout from "../components/layout";
 import PageHeader from "../components/page-header";
+import ContactForm from "../components/contact-form";
 
 export default function Contact({pageData}){
   return (
@@ -9,6 +10,7 @@ export default function Contact({pageData}){
         <h1>{pageData.heading}</h1>
         <p>{pageData.subheading}</p>
       </PageHeader>
+      <ContactForm /> 
     </Layout>
   )
 }

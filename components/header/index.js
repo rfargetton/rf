@@ -24,7 +24,7 @@ export default function Header({ siteName }) {
               </a>
             </Link>
             <div className="flex ml-2 items-center">
-              <Link href="/"><a className="md-hidden btn cta">Contact</a></Link>
+              <Link href="/contact"><a className="md-hidden btn cta">Contact</a></Link>
               <button onClick={handleThemeClick} className="md-hidden btn p-1 m-2">
                 {theme == "dark" 
                   ? <Sun /> 
@@ -39,7 +39,7 @@ export default function Header({ siteName }) {
             <Link href="/a-propos"><a className="m-2 flex-shrink-0">À Propos</a></Link>
           </div>
           <div className="flex items-center ml-2">
-            <Link href="/"><a className="sm-hidden btn cta">Contact</a></Link>
+            <Link href="/contact"><a className="sm-hidden btn cta">Contact</a></Link>
             <button className="sm-hidden m-2 btn p-1" onClick={handleThemeClick}>
               {theme == "dark" ? <Sun /> : <Moon />}
             </button>
