@@ -4,6 +4,12 @@ import { useRouter } from "next/router" ;
 import Card from "../card";
 import Container from "../container";
 
+function urlEncode (data){
+  return Object.entries(data).map((entry) => {
+    return `${encodeURIComponent(entry[0])}=${encodeURIComponent(entry[1])}` ;
+  }).join("&");
+}
+
 export default function ContactForm({}){
   return (
     <div className="py-5 z-20 relative">
