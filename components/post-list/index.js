@@ -7,31 +7,34 @@ import Container from "../container";
 import Card from "../card";
 
 export default function PostList({ posts, children }) {
+  console.log(posts);
   return (
-    <div className="my-8">
+    <section className="py-5 relative">
       <Container>
-        <div className="py-4 w-full md:w-8/12 mx-auto text-center">
-          {children}
-        </div>
-        <div>
-          <ul className="grid grid-cols-2 gap-6 list-none">
+        {children &&
+          <div className="py-5 w-full md:w-8/12 mx-auto text-center">
+            {children}
+          </div>
+        }
+        <div className="py-5">
+          <ul className="flex flex-row flex-wrap -m-3">
             {posts.map((post) => (
-              <li key={post.id} className="transform hover:scale-105 transition">
+              <li key={post.id} className="w-full md:w-1/2 p-3 transform hover:scale-105 transition">
                 <Card>
-                  <div className="p-4">
-                    <div className="relative h-48 w-full rounded-xl overflow-hidden">
+                  <div className="flex flex-col h-full">
+                    <div className="relative m-6 h-56">
                       <Image 
-                        src={post.img}
+                        src={post.featured_image}
                         layout="fill"
-                        objectFit="cover"
+                        objectFit="contain"
                       />
                     </div>
-                    <div className="mt-4">
-                      <Date dateString={post.date} />
+                    <div className="p-6 flex-grow flex flex-col">
+                      <p>publié le <Date dateString={post.date} /></p>
                       <h3 className="mt-2">{post.title}</h3>
-                      <Link href={`/posts/${post.id}`}>
-                        <a>
-                          <div className="flex justify-between text-blue-700 items-center mt-4">
+                      <Link href={`/posts/${post.id}`} >
+                        <a className="mt-auto">
+                          <div className="flex justify-between text-sky dark:text-ice items-center mt-4">
                             <div>Read More</div>
                             <div>
                               <ArrowRight />
@@ -47,6 +50,6 @@ export default function PostList({ posts, children }) {
           </ul>
         </div>
       </Container>
-    </div>
+    </section>
   );
 }

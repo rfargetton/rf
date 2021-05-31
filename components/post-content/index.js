@@ -3,7 +3,7 @@ import Card from "../card";
 
 export default function PostContent({htmlContent}){
   return(
-    <div className="-mt-4">
+    <div className="relative">
       <Container>
         <div className="w-full md:w-10/12">
           <Card>

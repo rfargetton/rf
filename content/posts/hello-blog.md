@@ -1,7 +1,10 @@
 ---
-title: Hello Blog
-date: 2021-02-25T08:27:44.686Z
-featured_image: /images/sr-71.jpg
+title: Les générateurs de site statique 
+date: "2021-02-25"
+featured_image: /images/uploads/ssg-hero.png
+tags:
+  - "ssg"
+  - "jamstack"
 ---
 
 ## Sodales potenti tempor praesent justo maecenas ante odio fringil

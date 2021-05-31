@@ -4,22 +4,26 @@
 
 @layer base {
   .btn {
-    @apply p-2 rounded-lg text-center font-bold bg-blue-700 text-white text-base hover:bg-gray-900;
+    @apply rounded-lg text-center font-bold outline-none focus:outline-none;
+    line-height: normal;
+  }  
+  .cta {
+    @apply p-2 bg-sky dark:bg-ice text-snow dark:text-slate; 
   }
   p {
     @apply my-2;
   }
   h1 {
-    @apply text-4xl lg:text-5xl;
+    @apply text-3xl lg:text-4xl;
   }
   h2 {
-    @apply text-2xl lg:text-4xl;
+    @apply text-2xl lg:text-3xl;
   }
   h3 {
-    @apply text-xl lg:text-3xl;
+    @apply text-xl lg:text-2xl;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold my-4 leading-tight md:leading-tight;
+    @apply font-bold leading-tight md:leading-tight;
   }
   p {
     @apply text-base leading-relaxed;
@@ -51,6 +55,10 @@ body {
   color: #333333;
   font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -60,6 +68,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+main::before {
+  @apply bg-snow-dark dark:bg-slate-dark;
+  position: absolute;
+  content: "";
+  height: 620px;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 

@@ -1,9 +1,9 @@
 import settings from "../../config.json";
-
 import Date from "../../components/date";
 import Layout from "../../components/layout";
-import Hero from "../../components/hero";
+import PostHeader from "../../components/post-header";
 import PostContent from "../../components/post-content";
+import TagList from "../../components/tag-list";
 import { getAllFilesId, getFileData } from "../../lib/folder";
 
 export default function Post({ postData }) {
@@ -14,14 +14,17 @@ export default function Post({ postData }) {
       image={postData.img}
       description="Some description text"
     >
-      <Hero
-        image={postData.img}
-      >
-        <h1>{postData.title}</h1>
-        <Date dateString={postData.date} />
-      </Hero>
+      <article>
+        <PostHeader
+          image={postData.featured_image}
+        >
+          <p className="text-purple">publié le <Date dateString={postData.date} /></p>
+          <h1>{postData.title}</h1>
+          <TagList tags={postData.tags} />
+        </PostHeader>
 
-      <PostContent htmlContent={postData.htmlContent} />
+        <PostContent htmlContent={postData.htmlContent} />
+      </article>
     </Layout>
   );
 }

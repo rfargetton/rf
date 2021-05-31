@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer({}){
   return (
-    <footer className="border-t mt-8">
+    <footer className="border-t border-snow-dark dark:border-slate-dark mt-8">
       <Container>
         <div className="py-10 flex flex-col justify-start items-start">
           <div>
@@ -18,7 +18,7 @@ export default function Footer({}){
               </Link>
             </nav>
           </div>
-          <div className="my-2 text-gray-500">
+          <div className="my-2">
             <div>Made with Next.js</div>
           </div>
         </div>

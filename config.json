@@ -1,6 +1,6 @@
 {
-  "base_url": "https://www.sitename.com",
-  "site_name": "Next.js + NetlifyCMS",
-  "description": "A simple starter template for a blog, using Next.js and NetlifyCMS",
+  "base_url": "https://www.romaricfargetton.com",
+  "site_name": "Romaric Fargetton",
+  "description": "Développeur, designer et formateur passionné par le web et ses technologies, je réalise applications et sites web avec un seul objectif en tête: une expérience intuitive, rapide et élégante.",
   "logo": "/images/logo.svg"
 }

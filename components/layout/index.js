@@ -1,9 +1,12 @@
 import Head from "next/head" ;
 import Header from "../header";
 import Footer from "../footer";
-import settings from "../../config.json"
+import settings from "../../config.json";
+import {useTheme} from "../../providers/theme";
 
 export default function Layout({ children, url, title, description, image }) {
+  const {theme} = useTheme();
+
   return (
     <div>
       <Head>

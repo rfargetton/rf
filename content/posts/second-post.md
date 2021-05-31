@@ -1,7 +1,10 @@
 ---
 title: Second Post
-date: 2021-01-17T08:27:44.686Z
-featured_image: /images/rivers.jpg
+date: "2021-01-17"
+featured_image: /images/uploads/800x600.png
+tags: 
+  - "random"
+  - "jamstack"
 ---
 
 ## Sodales potenti tempor praesent justo maecenas ante odio fringil
