@@ -1,4 +1,4 @@
-export function FormationIcon({ strokeWidth }){
+export function Formation({ strokeWidth }){
   return (
     <svg className="mb-3 overflow-visible" width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M44.3334 50V44.6667C44.3334 41.8377 43.2095 39.1246 41.2092 37.1242C39.2088 35.1238 36.4957 34 33.6667 34H12.3334C9.50438 34 6.79127 35.1238 4.79088 37.1242C2.79049 39.1246 1.66669 41.8377 1.66669 44.6667V50M33.6666 12.6667C33.6666 18.5577 28.891 23.3333 23 23.3333C17.1089 23.3333 12.3333 18.5577 12.3333 12.6667C12.3333 6.77563 17.1089 2 23 2C28.891 2 33.6666 6.77563 33.6666 12.6667Z" className="stroke-current text-sky dark:text-ice" stroke-width={strokeWidth} stroke-linecap="round" stroke-linejoin="round"/>
@@ -7,7 +7,7 @@ export function FormationIcon({ strokeWidth }){
   )
 }
 
-export function SeoIcon ({ strokeWidth }){
+export function Seo ({ strokeWidth }){
   return (
     <svg className="mb-3 animate-spin-slow" width="63" height="62" viewBox="0 0 63 62" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M31.3334 39C35.7517 39 39.3334 35.4183 39.3334 31C39.3334 26.5817 35.7517 23 31.3334 23C26.9151 23 23.3334 26.5817 23.3334 31C23.3334 35.4183 26.9151 39 31.3334 39Z" className="stroke-current text-purple" stroke-width={strokeWidth} stroke-linecap="round" stroke-linejoin="round"/>
@@ -16,7 +16,7 @@ export function SeoIcon ({ strokeWidth }){
   )
 }
 
-export function DevIcon ({ strokeWidth }){
+export function Dev ({ strokeWidth }){
   return (
     <svg className="mb-3" width="47" height="41" viewBox="0 0 47 41" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M2 34L18 18L2 2" className="stroke-current text-sky dark:text-ice" stroke-width={strokeWidth} stroke-linecap="round" stroke-linejoin="round"/>
@@ -25,7 +25,7 @@ export function DevIcon ({ strokeWidth }){
   )
 }
 
-export function WebdesignIcon ({ strokeWidth }){
+export function Webdesign ({ strokeWidth }){
   return (
     <svg className="mb-3 overflow-visible" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M26 7.65686H7.33333C5.91885 7.65686 4.56229 8.21876 3.5621 9.21896C2.5619 10.2192 2 11.5757 2 12.9902V50.3235C2 51.738 2.5619 53.0946 3.5621 54.0948C4.56229 55.095 5.91885 55.6569 7.33333 55.6569H44.6667C46.0812 55.6569 47.4377 55.095 48.4379 54.0948C49.4381 53.0946 50 51.738 50 50.3235V31.6569" className="stroke-current text-purple" stroke-width={strokeWidth} stroke-linecap="round" stroke-linejoin="round"/>

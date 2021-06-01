@@ -1,11 +1,9 @@
 import Container from "../container";
 import Card from "../card";
-import {SeoIcon, FormationIcon, DevIcon, WebdesignIcon} from "../icons";
+import {Seo, Formation, Dev, Webdesign} from "../icons";
 
 export default function ServiceList ({items, children}) {
   const [webdesign, dev, seo, formation] = items;
-
-  console.log(webdesign);
 
   return (
     <section className="py-5 relative">
@@ -18,7 +16,7 @@ export default function ServiceList ({items, children}) {
             <li key={webdesign.title} className="w-full md:w-1/2 p-3">
               <Card>
                 <div className="p-6">
-                  <WebdesignIcon strokeWidth={3} />
+                  <Webdesign strokeWidth={3} />
                   <h3>{webdesign.title}</h3>
                   <p>{webdesign.description}</p>
                 </div>
@@ -27,7 +25,7 @@ export default function ServiceList ({items, children}) {
             <li key={dev.title} className="w-full md:w-1/2 p-3">
               <Card>
                 <div className="p-6">
-                  <DevIcon strokeWidth={3} />
+                  <Dev strokeWidth={3} />
                   <h3>{dev.title}</h3>
                   <p>{dev.description}</p>
                 </div>
@@ -36,7 +34,7 @@ export default function ServiceList ({items, children}) {
             <li key={seo.title} className="w-full md:w-1/2 p-3">
               <Card>
                 <div className="p-6">
-                  <SeoIcon strokeWidth={3} />
+                  <Seo strokeWidth={3} />
                   <h3>{seo.title}</h3>
                   <p>{seo.description}</p>
                 </div>
@@ -45,7 +43,7 @@ export default function ServiceList ({items, children}) {
             <li key={formation.title} className="w-full md:w-1/2 p-3">
               <Card>
                 <div className="p-6">
-                  <FormationIcon strokeWidth={3} />
+                  <Formation strokeWidth={3} />
                   <h3>{formation.title}</h3>
                   <p>{formation.description}</p>
                 </div>
