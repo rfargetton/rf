@@ -6,8 +6,8 @@ import Date from "../date";
 import Container from "../container";
 import Card from "../card";
 
-export default function PostList({ posts, children }) {
-  console.log(posts);
+export default function PostList({ items, limit, children }) {
+  const filteredPosts = items.slice(0, limit);
   return (
     <section className="py-5 relative">
       <Container>
@@ -18,7 +18,7 @@ export default function PostList({ posts, children }) {
         }
         <div className="py-5">
           <ul className="flex flex-row flex-wrap -m-3">
-            {posts.map((post) => (
+            {filteredPosts.map((post) => (
               <li key={post.id} className="w-full md:w-1/2 p-3 transform hover:scale-105 transition">
                 <Card>
                   <div className="flex flex-col h-full">

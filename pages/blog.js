@@ -12,7 +12,10 @@ export default function Blog({posts}){
         <p>Some articles</p>
       </PageHeader>
 
-      <PostList posts={posts} />
+      <PostList 
+        items={posts} 
+        limit={1000}
+      />
     </Layout>
   )
 }

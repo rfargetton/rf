@@ -3,7 +3,8 @@ import Image from "next/image";
 import Container from "../container";
 import Card from "../card";
 
-export default function ProjectList({projects, children}){
+export default function ProjectList({items, limit, children}){
+  const filteredProjects = items.slice(0, limit);
   return (
     <section className="py-5 relative">
       <Container>
@@ -12,7 +13,7 @@ export default function ProjectList({projects, children}){
         </div>
         <div className="py-5">
           <ul className="w-full md:w-10/12 mx-auto">
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <li key={project.id}>
                 <div className="flex flex-row items-center">
                   <div className="w-8/12 z-10">

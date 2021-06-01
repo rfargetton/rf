@@ -15,15 +15,23 @@ export default function Home({ allPostsData, pageData, allProjectsData, tags }) 
           <p>{pageData.subheading}</p>
         </Hero>
 
-        <ServiceList services={pageData.services}>
+        <ServiceList 
+          items={pageData.services}
+        >
           <h2>Services</h2>
         </ServiceList>
 
-        <PostList posts={allPostsData}>
+        <PostList 
+          items={allPostsData} 
+          limit={2}
+        >
           <h2>Recent Posts</h2>
         </PostList>
 
-        <ProjectList projects={allProjectsData}>
+        <ProjectList 
+          items={allProjectsData}
+          limit={4}
+        >
           <h2>Projects</h2>
         </ProjectList>
 

@@ -12,7 +12,10 @@ export default function Projets({ projects }){
         <p>Quelques projets</p>
       </PageHeader>
 
-      <ProjectList projects={projects} />
+      <ProjectList 
+        items={projects} 
+        limit={1000}
+      />
 
     </Layout>
   )

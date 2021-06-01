@@ -2,8 +2,8 @@ import Container from "../container";
 import Card from "../card";
 import {SeoIcon, FormationIcon, DevIcon, WebdesignIcon} from "../icons";
 
-export default function ServiceList ({services, children}) {
-  const [webdesign, dev, seo, formation] = services;
+export default function ServiceList ({items, children}) {
+  const [webdesign, dev, seo, formation] = items;
 
   console.log(webdesign);
 
