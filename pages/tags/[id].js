@@ -14,7 +14,10 @@ export default function Tag({ tag, posts }){
         <p>{`${posts.length} article${posts.length > 1 ? "s" : ""} trouvé${posts.length > 1 ? "s" : ""} dans cette catégorie`}</p>
       </PageHeader>
 
-      <PostList posts={posts} />
+      <PostList 
+        items={posts} 
+        limit={1000}
+      />
 
     </Layout>
   )
