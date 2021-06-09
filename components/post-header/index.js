@@ -4,7 +4,7 @@ import Container from "../container";
 
 export default function PostHeader({image, children}){
   return (
-    <header className="py-10">
+    <header className="py-16">
       <Container>
         <div className="flex flex-col md:flex-row relative justify-between items-center">
           <div className="h-full w-full md:w-7/12 flex flex-col justify-center items-start">

@@ -13,8 +13,8 @@ export default function Blog({posts, pageData}){
       title={`${pageData.title} | ${settings.site_name}`}
     >
       <PageHeader>
-        <h1>{pageData.heading}</h1>
-        <p>{pageData.subheading}</p>
+        <h1 className="mb-2">Blog</h1>
+        <p className="text-lg">Some articles</p>
       </PageHeader>
 
       <PostList 
