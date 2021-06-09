@@ -5,10 +5,13 @@ import ContactForm from "../components/contact-form";
 
 export default function Contact({pageData}){
   return (
-    <Layout url="/contact" title={pageData.title}>
+    <Layout 
+      url="/contact" 
+      title={pageData.title}
+    >
       <PageHeader>
-        <h1>{pageData.heading}</h1>
-        <p>{pageData.subheading}</p>
+        <h1 className="mb-2">{pageData.heading}</h1>
+        <p className="text-lg">{pageData.subheading}</p>
       </PageHeader>
       <ContactForm /> 
     </Layout>

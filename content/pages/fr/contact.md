@@ -1,5 +1,5 @@
 ---
-title: About | Nextjs + NetlifyCMS
-heading: Contact us
-subheading: Tell us how we can help you 
+title: Contact
+heading: Contact 
+subheading: "Vous êtes à la recherche d'un développeur front-end pour votre prochain projet? Faites moi signe"
 ---

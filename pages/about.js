@@ -7,11 +7,11 @@ export default function About({ pageData }) {
   return (
     <Layout 
       url="/about" 
-      title={`${pageData.title} |`}
+      title={`${pageData.title} | ${settings.site_name}`}
     >
       <PageHeader>
-        <h1>{pageData.heading}</h1>
-        <p>{pageData.subheading}</p>        
+        <h1 className="mb-2">{pageData.heading}</h1>
+        <p className="text-lg">{pageData.subheading}</p>        
       </PageHeader>
     </Layout>
   );

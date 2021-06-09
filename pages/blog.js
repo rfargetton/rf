@@ -13,8 +13,8 @@ export default function Blog({posts, pageData}){
       title={`${pageData.title} | ${settings.site_name}`}
     >
       <PageHeader>
-        <h1 className="mb-2">Blog</h1>
-        <p className="text-lg">Some articles</p>
+        <h1 className="mb-2">{pageData.heading}</h1>
+        <p className="text-lg">{pageData.subheading}</p>
       </PageHeader>
 
       <PostList 
@@ -26,7 +26,7 @@ export default function Blog({posts, pageData}){
 }
 
 export async function getStaticProps({ locale }){
-  const pageData = await getFile("pages", "blog", locale)
+  const pageData = await getFile("pages", "blog", locale);
   const posts = await getAllFilesData("posts", locale);
 
   return {

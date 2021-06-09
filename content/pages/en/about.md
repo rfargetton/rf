@@ -1,5 +1,5 @@
 ---
-title: About | Nextjs + NetlifyCMS
-heading: Find out more about us
+title: About me
+heading: About me
 subheading: Some description text.
 ---

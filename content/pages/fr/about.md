@@ -1,5 +1,5 @@
 ---
 title: À propos 
-heading: Pour en savoir plus à mon sujet
+heading: À propos
 subheading: Un texte de description
 ---

@@ -47,7 +47,7 @@ export default function PostList({ items, limit, children }) {
                     <div className="p-6 flex-grow flex flex-col">
                       <p>{strings.date[locale]} <Date dateString={post.date} /></p>
                       <h3 className="mt-2">{post.title}</h3>
-                      <Link href={`/posts/${post.id}`} >
+                      <Link href={`/blog/${post.id}`} >
                         <a className="mt-auto">
                           <div className="flex justify-between text-sky dark:text-ice items-center mt-4">
                             <div>{strings.link[locale]}</div>

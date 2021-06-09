@@ -1,5 +1,5 @@
 ---
-title: About | Nextjs + NetlifyCMS
-heading: Contact us
+title: Contact
+heading: Contact 
 subheading: Tell us how we can help you 
 ---

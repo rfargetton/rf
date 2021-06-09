@@ -10,7 +10,6 @@ import ProjectList from "../components/project-list" ;
 
 export default function Home({ allPostsData, pageData, allProjectsData, tags }) {
   const {locale} = useRouter();
-  console.log(locale);
 
   return (
     <Layout url="/" title={pageData.title}>
@@ -31,7 +30,7 @@ export default function Home({ allPostsData, pageData, allProjectsData, tags }) 
           limit={2}
         >
           <h2>
-            {locale == "fr" ? "Derniers récents" : "Latest posts"}
+            {locale == "fr" ? "Derniers articles" : "Latest posts"}
           </h2>
         </PostList>
 
