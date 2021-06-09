@@ -3,6 +3,10 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        "display": ["Space Grotesk"],
+        "body": ["Inter"]
+      },
       colors: {
         slate: {
           light: "#2F363D",

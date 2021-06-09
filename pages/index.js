@@ -11,8 +11,8 @@ export default function Home({ allPostsData, pageData, allProjectsData, tags }) 
     <Layout url="/" title={pageData.title}>
       <div>
         <Hero image={pageData.image}>
-          <h1>{pageData.heading}</h1>
-          <p>{pageData.subheading}</p>
+          <h1 className="mb-2">{pageData.heading}</h1>
+          <p className="text-lg">{pageData.subheading}</p>
         </Hero>
 
         <ServiceList 

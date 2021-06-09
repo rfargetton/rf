@@ -8,8 +8,8 @@ export default function Blog({posts}){
   return (
     <Layout url="/blog" title="Blog">
       <PageHeader>
-        <h1>Blog</h1>
-        <p>Some articles</p>
+        <h1 className="mb-2">Blog</h1>
+        <p className="text-lg">Some articles</p>
       </PageHeader>
 
       <PostList 
