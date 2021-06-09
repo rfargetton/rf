@@ -21,8 +21,8 @@ export default function Projets({ projects }){
   )
 }
 
-export async function getStaticProps(){
-  const allProjects = await getAllFilesData("projects");
+export async function getStaticProps({ locale }){
+  const allProjects = await getAllFilesData("projects", locale);
   return {
     props: {
       projects: allProjects

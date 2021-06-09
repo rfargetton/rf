@@ -15,8 +15,8 @@ export default function Contact({pageData}){
   )
 }
 
-export async function getStaticProps(){
-  const pageData = await getFile("pages", "contact");
+export async function getStaticProps({ locale }){
+  const pageData = await getFile("pages", "contact", locale);
   return {
     props: {
       pageData

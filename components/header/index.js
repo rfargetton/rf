@@ -34,9 +34,9 @@ export default function Header({ siteName }) {
             </div>
           </div>
           <div className="flex overflow-x-auto -m-2 md:m-0 font-bold">
-            <Link href="/projets"><a className="m-2 flex-shrink-0">Projets</a></Link>
+            <Link href="/projects"><a className="m-2 flex-shrink-0">Projets</a></Link>
             <Link href="/blog"><a className="m-2 flex-shrink-0">Blog</a></Link>
-            <Link href="/a-propos"><a className="m-2 flex-shrink-0">À Propos</a></Link>
+            <Link href="/about"><a className="m-2 flex-shrink-0">À Propos</a></Link>
           </div>
           <div className="flex items-center ml-2">
             <Link href="/contact"><a className="sm-hidden btn cta">Contact</a></Link>

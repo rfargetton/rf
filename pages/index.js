@@ -1,3 +1,5 @@
+import {useRouter} from "next/router";
+
 import { getAllFilesData } from "../lib/folder";
 import { getFile } from "../lib/file";
 import Layout from "../components/layout";
@@ -7,6 +9,9 @@ import ServiceList from "../components/service-list" ;
 import ProjectList from "../components/project-list" ;
 
 export default function Home({ allPostsData, pageData, allProjectsData, tags }) {
+  const {locale} = useRouter();
+  console.log(locale);
+
   return (
     <Layout url="/" title={pageData.title}>
       <div>
@@ -25,14 +30,18 @@ export default function Home({ allPostsData, pageData, allProjectsData, tags }) 
           items={allPostsData} 
           limit={2}
         >
-          <h2>Recent Posts</h2>
+          <h2>
+            {locale == "fr" ? "Derniers récents" : "Latest posts"}
+          </h2>
         </PostList>
 
         <ProjectList 
           items={allProjectsData}
           limit={4}
         >
-          <h2>Projects</h2>
+          <h2>
+            {locale == "fr" ? "Derniers projets" : "Latest projects"}
+          </h2>
         </ProjectList>
 
       </div>
@@ -40,10 +49,10 @@ export default function Home({ allPostsData, pageData, allProjectsData, tags }) 
   );
 }
 
-export async function getStaticProps() {
-  const allPostsData = await getAllFilesData("posts");
-  const allProjectsData = await getAllFilesData("projects");
-  const pageData = await getFile("pages", "home");
+export async function getStaticProps({ locale }) {
+  const allPostsData = await getAllFilesData("posts", locale);
+  const allProjectsData = await getAllFilesData("projects", locale);
+  const pageData = await getFile("pages", "home", locale);
 
   return {
     props: {

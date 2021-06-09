@@ -1,6 +1,6 @@
 ---
-title: Romaric Fargetton | Développeur web, designer et formateur
-heading: "Salut ! Je suis Romaric Fargetton"
+title: Romaric Fargetton | Web developer, designer et teacher
+heading: "Hey ! I'm Romaric Fargetton"
 subheading: "Développeur, designer et formateur passionné par le web et ses technologies, je réalise applications et sites web avec un seul objectif en tête: une expérience intuitive, rapide et élégante."
 image: /images/avatar.jpg
 services:
