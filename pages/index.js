@@ -1,6 +1,6 @@
 import {useRouter} from "next/router";
 
-import { getAllFilesData } from "../lib/folder";
+import { getAllFilesData, getAllFilesId } from "../lib/folder";
 import { getFile } from "../lib/file";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
@@ -8,8 +8,9 @@ import PostList from "../components/post-list";
 import ServiceList from "../components/service-list" ;
 import ProjectList from "../components/project-list" ;
 
-export default function Home({ allPostsData, pageData, allProjectsData, tags }) {
+export default function Home({ allPostsData, pageData, allProjectsData, filesID }) {
   const {locale} = useRouter();
+  console.log(filesID);
 
   return (
     <Layout url="/" title={pageData.title}>
@@ -52,12 +53,14 @@ export async function getStaticProps({ locale }) {
   const allPostsData = await getAllFilesData("posts", locale);
   const allProjectsData = await getAllFilesData("projects", locale);
   const pageData = await getFile("pages", "home", locale);
+  const filesID = await getAllFilesId("posts");
 
   return {
     props: {
       allPostsData,
       pageData,
-      allProjectsData
+      allProjectsData,
+      filesID
     },
   };
 }
