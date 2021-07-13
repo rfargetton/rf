@@ -53,7 +53,7 @@ export async function getStaticProps({ locale }) {
   const allPostsData = await getAllFilesData("posts", locale);
   const allProjectsData = await getAllFilesData("projects", locale);
   const pageData = await getFile("pages", "home", locale);
-  const filesID = await getAllFilesId("posts");
+  const filesID = await getAllFilesId("posts", locale);
 
   return {
     props: {

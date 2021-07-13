@@ -29,8 +29,15 @@ export default function Post({ postData }) {
   );
 }
 
-export async function getStaticPaths() {
-  const paths = await getAllFilesId("posts");
+export async function getStaticPaths({ locales }) {
+  const allFilesId = await Promise.all(locales.map(async function(locale){
+    const posts = await getAllFilesId("posts", locale);
+    return {locale, posts};
+  }))
+
+  const paths = allFilesId.map(locale => locale.posts.map(post => ({params: {id: post}, locale: locale.locale}))).flat();
+  console.log(paths);
+
   return {
     paths,
     fallback: false,

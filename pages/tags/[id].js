@@ -3,6 +3,7 @@ import { getAllTagsId } from "../../lib/tags";
 import { getAllPostsByTag } from "../../lib/folder";
 import PostList from "../../components/post-list";
 import PageHeader from "../../components/page-header";
+import {useRouter} from "next/router";
 
 export default function Tag({ tag, posts }){
   console.log(posts);
@@ -23,8 +24,9 @@ export default function Tag({ tag, posts }){
   )
 }
 
-export async function getStaticPaths(){
-  const paths = await getAllTagsId();
+export async function getStaticPaths({ locales }){
+  const allTags = await getAllTagsId();
+  const paths = allTags.map((tag) => locales.map((locale) => ({params: {id: tag}, locale: locale}))).flat();
 
   return {
     paths,
@@ -32,8 +34,8 @@ export async function getStaticPaths(){
   }
 }
 
-export async function getStaticProps({ params }){
-  const posts = await getAllPostsByTag(params.id);
+export async function getStaticProps({ params, locale }){
+  const posts = await getAllPostsByTag(params.id, locale);
 
   return {
     props: {
